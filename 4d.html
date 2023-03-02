@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const obj = new Date()
+        const h = obj.getHours()
+        const m=obj.getMinutes();
+        const s=obj.getSeconds();
+        document.write("current time is "+h+":"+m+":"+s);
+        document.write("<br>")
+        let greetings = ""
+        if (h <= 12) {
+            greetings = "good_mrng"
+            
+        }
+        else if(h>12 && h<=17){
+            greetings="good _afternoon"
+        }
+        else if(h>17 && h<=21) {
+            greetings = "good_eveng"
+            
+        }
+        else{
+            greetings="good_night"
+        }
+        document.write(greetings);
+    </script>
+</body>
+
+</html>
