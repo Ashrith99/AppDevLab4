@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>4A</title>
+  </head>
+  <body>
+    <script>
+      
+      const string = "Ashrith";
+      const substring = " from AP";
+
+      const searchSubstring = (string, substring) => {
+        
+        const index = string.indexOf(substring);
+        document.write(`Using String object method: ${index}`);
+        document.write("<br>")
+
+        
+        for (let i = 0; i < string.length - substring.length + 1; i++) {
+          if (string.slice(i, i + substring.length) === substring) {
+            document.write(`Without using String object method: ${i}`);
+            document.write("<br>")
+            break;
+          }
+        }
+      };
+
+      searchSubstring(string, "shr");
+
+      
+      const getCharacterAtIndex = (string, index) => {
+        
+        const char = string.charAt(index);
+        document.write(`Using String object method: ${char}`);
+        document.write("<br>")
+
+        
+        document.write(`Without using String object method: ${string[index]}`);
+        document.write("<br>")
+      };
+
+      getCharacterAtIndex(string, 4);
+
+      // III. To concatenate two string objects
+      const concatenateStrings = (string1, string2) => {
+        // Using String object method
+        const result = string1.concat(string2);
+        document.write(`Using String object method: ${result}`);
+        document.write("<br>")
+
+        // Without using String object method
+        document.write(`Without using String object method: ${string1}${string2}`);
+        document.write("<br>")
+      };
+
+      concatenateStrings(string, substring);
+    </script>
+  </body>
+</html>
